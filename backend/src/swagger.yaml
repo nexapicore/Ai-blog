@@ -1,0 +1,23 @@
+openapi: 3.0.0
+info:
+  title: AI Blog Platform API
+  version: 1.0.0
+paths:
+  /posts:
+    get:
+      summary: Get all posts
+      responses:
+        '200': { description: List of posts }
+      security:
+        - bearerAuth: []
+  /communities:
+    get:
+      summary: List communities
+      responses:
+        '200': { description: List of communities }
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
